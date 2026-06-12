@@ -1,6 +1,9 @@
 <script>
     async function  Main() {
-        const Explore = await fetch('https://api.github.com/repos/mhode97/Oss-Data-back-end/contents/')
+        const Explore = await fetch('https://api.github.com/repos/mhode97/Oss-Data-back-end/contents/',{method:'GET',headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }})
         const Json_Explore = await Explore.json()
         console.log(Json_Explore)
     }
